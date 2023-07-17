@@ -4,7 +4,7 @@ import ExpenceForm from "./ExpenseForm";
 const NewExpense = (props) => {
 
   const expenseDataHandler = (enteredExpenseData)=>{
-    const expenseData = {...enteredExpenseData}
+    const expenseData = {...enteredExpenseData, id: Date.now().toString()}
     
     props.onSaveNewExpense(expenseData);
   }
